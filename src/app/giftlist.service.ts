@@ -18,5 +18,10 @@ export class GiftlistService {
     return of(PERSONS);
 
   }
+  getPerson(id: number):Observable<Person> {
+
+    this.messageService.add('GiftLstService: fetched person id=${id}');
+    return of(PERSONS.find(person=>person.id ===id));
+  }
 }
 

@@ -9,18 +9,12 @@ import { GiftlistService } from "../giftlist.service";
 })
 export class GiftsComponent implements OnInit {
 
-    selectedPerson: Person;
-
     persons: Person[];
 
     constructor(private giftlistService:GiftlistService){}
 
   ngOnInit() {
       this.getGifts();
-  }
-
-  onSelect(person: Person) : void {
-      this.selectedPerson = person;
   }
 
   getGifts(): void {
